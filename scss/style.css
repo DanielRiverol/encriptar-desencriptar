@@ -29,9 +29,10 @@ body {
 }
 
 .wrapper {
+  margin-top: 150px;
   padding: 10px;
   max-width: 960px;
-  max-height: 750px;
+  min-height: 750px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -46,9 +47,7 @@ body {
 footer {
   width: 100%;
   height: 4rem;
-  /* background-color: red; */
-  /* position: absolute; */
-  bottom: 0;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -124,15 +123,16 @@ textarea {
 }
 
 #encrypt-text {
-  border: 1px solid;
+  border: 1px solid #ccc;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   width: 40%;
 }
 
 @media screen and (min-device-width: 576px) and (max-device-width: 768px) {
   .wrapper {
+    margin-top: 0;
     width: 100%;
-    height: 98%;
+    /* max-height: 75%; */
     justify-content: space-between;
   }
   textarea {
@@ -159,18 +159,20 @@ textarea {
 }
 @media screen and (min-device-width: 360px) and (max-device-width: 575px) {
   .wrapper {
-    top: 0;
-    left: 0;
+    margin-top: 0;
     width: 100%;
-    height: 93%;
+    height: 100%;
+    max-height: 93%;
     border-radius: 0;
   }
   .wrapper .textbox-container {
     justify-content: space-between;
   }
+  .wrapper .textbox-container span {
+    order: 0;
+  }
   .wrapper .textbox-container:nth-child(2) {
     font-size: 14px;
-    order: 0;
   }
   .buttons {
     width: 100%;
