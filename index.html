@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="./assets/img/favicon/favicon-16.png"
+    />
+    <link
+      type="image/png"
+      sizes="32x32"
+      rel="icon"
+      href="./assets/img/favicon/favicon-32.png"
+    />
+    <link
+      type="image/png"
+      sizes="96x96"
+      rel="icon"
+      href="./assets/img/favicon/favicon-96.png"
+    />
+    <link
+      type="image/png"
+      sizes="120x120"
+      rel="icon"
+      href="./assets/img/favicon/favicon-120.png"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <title>Encriptar|Desencriptar</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="logo">
+        <img src="./assets/img/logo-svg/logo-96.svg" alt="logo-image" />
+      </section>
+      <section class="textbox-container">
+        <textarea
+          name=""
+          id="plain-text"
+          cols="35"
+          rows="10"
+          placeholder="Ingresa el texto a encriptar"
+        ></textarea>
+        <span><i class='bx bxs-error-circle' ></i> Solo minúsculas, sin acentos</span>
+        <section class="buttons">
+          <button class="btn btn-encrypt">Encriptar!</button>
+          <button class="btn btn-decrypt">Desencriptar!</button>
+        </section>
+        <textarea name="" id="encrypt-text" cols="35" rows="12" placeholder=""></textarea>
+      </section>
+    </div>
+    <footer>
+      <div>
+        <span>Desarrollado por <strong>Daniel Riverol</strong></span>
+
+        <span class="social-item">
+          <a href=""><i class="bx bxl-linkedin-square"></i></a>
+        </span>
+        <span class="social-item">
+          <a href=""><i class="bx bxl-github"></i></a>
+        </span>
+      </div>
+      <div>&copy; Derechos Reservados 2023</div>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
