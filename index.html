@@ -47,12 +47,23 @@
           rows="10"
           placeholder="Ingresa el texto a encriptar"
         ></textarea>
-        <span><i class='bx bxs-error-circle' ></i> Solo minúsculas, sin acentos</span>
+        <span
+          ><i class="bx bxs-error-circle"></i> Solo minúsculas, sin
+          acentos</span
+        >
         <section class="buttons">
           <button class="btn btn-encrypt">Encriptar!</button>
           <button class="btn btn-decrypt">Desencriptar!</button>
         </section>
-        <textarea name="encrypt-text" id="encrypt-text"  placeholder=""></textarea>
+        <div class="box-decrypt-container">
+          <textarea
+            name="encrypt-text"
+            id="encrypt-text"
+            placeholder="Aquí verás tu mensaje encriptado"
+          >
+          </textarea>
+          <button class="btn btn-copy"><i class="bx bxs-copy-alt"></i></button>
+        </div>
       </section>
     </div>
     <footer>

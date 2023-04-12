@@ -29,10 +29,10 @@ body {
 }
 
 .wrapper {
-  margin-top: 150px;
+  margin-top: 50px;
   padding: 10px;
   max-width: 960px;
-  min-height: 750px;
+  min-height: 680px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -81,6 +81,10 @@ footer span a i {
 .textbox-container span {
   order: 1;
 }
+.textbox-container .box-decrypt-container {
+  width: 40%;
+  position: relative;
+}
 
 .buttons {
   order: 2;
@@ -112,6 +116,16 @@ footer span a i {
   background-color: var(--button-decrypt);
 }
 
+.btn-copy {
+  position: absolute;
+  bottom: 22%;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  color: var(--background);
+  background-color: var(--headline);
+}
+
 textarea {
   resize: none;
   border: none;
@@ -125,7 +139,7 @@ textarea {
 #encrypt-text {
   border: 1px solid #ccc;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  width: 40%;
+  width: 100%;
 }
 
 @media screen and (min-device-width: 576px) and (max-device-width: 768px) {
@@ -147,6 +161,13 @@ textarea {
   }
   .textbox-container span {
     order: 0;
+  }
+  .textbox-container .box-decrypt-container {
+    width: 100%;
+    position: relative;
+  }
+  .btn-copy {
+    bottom: 5%;
   }
   textarea {
     width: 100%;
@@ -174,6 +195,10 @@ textarea {
   .wrapper .textbox-container:nth-child(2) {
     font-size: 14px;
   }
+  .wrapper .textbox-container .box-decrypt-container {
+    width: 100%;
+    position: relative;
+  }
   .buttons {
     width: 100%;
     flex-direction: column;
@@ -183,6 +208,10 @@ textarea {
   }
   .btn {
     width: 100%;
+  }
+  .btn-copy {
+    width: 40px;
+    bottom: 22%;
   }
   textarea {
     width: 100%;
