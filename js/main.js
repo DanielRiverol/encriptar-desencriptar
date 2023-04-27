@@ -8,44 +8,24 @@ textMessage.value = "";
 textEncrypt.value = "";
 
 //Funciones
-const encrypt = (message) => {
-  if (message.indexOf("e") !== -1) {
-    message = message.replaceAll("e", "enter");
-  }
-  if (message.indexOf("i") !== -1) {
-    message = message.replaceAll("i", "imes");
-  }
-  if (message.indexOf("a") !== -1) {
-    message = message.replaceAll("a", "ai");
-  }
-  if (message.indexOf("o") !== -1) {
-    message = message.replaceAll("o", "ober");
-  }
-  if (message.indexOf("u") !== -1) {
-    message = message.replaceAll("u", "ufat");
-  }
 
-  return message;
-};
-const decrypt = (message) => {
-  if (message.indexOf("ai") !== -1) {
-    message = message.replaceAll("ai", "a");
-  }
-  if (message.indexOf("enter") !== -1) {
-    message = message.replaceAll("enter", "e");
-  }
-  if (message.indexOf("imes") !== -1) {
-    message = message.replaceAll("imes", "i");
-  }
-  if (message.indexOf("ober") !== -1) {
-    message = message.replaceAll("ober", "o");
-  }
-  if (message.indexOf("ufat") !== -1) {
-    message = message.replaceAll("ufat", "u");
-  }
+function encrypt(texto) {
+  return texto
+    .replace(/e/g, "enter")
+    .replace(/i/g, "imes")
+    .replace(/a/g, "ai")
+    .replace(/o/g, "ober")
+    .replace(/u/g, "ufat");
+}
 
-  return message;
-};
+function decrypt(texto) {
+  return texto
+    .replace(/ai/g, "a")
+    .replace(/imes/g, "i")
+    .replace(/enter/g, "e")
+    .replace(/ober/g, "o")
+    .replace(/ufat/g, "u");
+}
 const validar = (input) => {
   return input.value !== ""
     ? input.value
@@ -54,7 +34,7 @@ const validar = (input) => {
 const copyToClipboard = (str) => {
   if (navigator && navigator.clipboard && navigator.clipboard.writeText)
     return navigator.clipboard.writeText(str);
-  return Promise.reject(" API Clipboard no disponible.");
+  return Promise.reject("API Clipboard no disponible.");
 };
 
 //Eventos
